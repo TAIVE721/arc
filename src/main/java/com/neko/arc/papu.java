@@ -10,7 +10,7 @@ public class papu {
         return 34;
     }
 
-    @RequestMapping("/hola")
+    @RequestMapping("/")
     public Number papu() {
         Number index = getpapu();
         return index;

@@ -1,19 +1,19 @@
 package com.neko.arc;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class papu {
 
-    private Number getpapu() {
-        return 34;
-    }
+    @Value("${spring.application.name}")
+    private String appName;
 
     @RequestMapping("/")
-    public Number papu() {
-        Number index = getpapu();
-        return index;
+    public String papu() {
+        System.out.println("appName: " + appName);
+        return "index.html";
     }
 
 }
